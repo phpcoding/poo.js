@@ -1,41 +1,105 @@
 <!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-    <title>Document</title>
-    
+    <title>poo.js Example</title>
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    
+    <!-- Font Awesome CDN embed code! -->
+    <script src="https://use.fontawesome.com/f1e1c6be44.js"></script>
     <!-- poo.js -->
     <script src="poo.js"></script>
-    
     <!-- useage -->
     <script>
     $(function(){
-      
       // singular
       $('#number').poo({number: 2445333});
-      
       // multiple
-      $('ul li').poo({speed: 10});
-      
+      $('#example ul li').poo({speed: 10});
+      // multiple 2
+      $('#example_10000 ul li').poo({speed: 10000});
+      // multiple 3
+      $('#example_20000 ul li').poo({speed: 20000});
     });
     </script>
-    
+
+    <style>
+      * { list-style: none; }
+      body { background-color: #2c3e50; font-family: 'Verdana'; }
+      .backPages { float: left; margin-right: 10px; margin-top: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 2px solid #333; padding: 5px; }
+      .backPages .example_title { background-color: #2c3e50; padding: 5px; color: #2ecc71; border-bottom: 2px solid #333; text-align: center; font-weight: 200; }
+      .backPages .example_content { background-color: #34495e; }
+      .list ul li{ display: block; padding: 5px; color: #fff; font-size: 16px; margin-right: 10px; text-align: center; }
+    </style>
 </head>
 <body>
 
-Sayı: <span id="number"></span>
+  <div class="backPages">
+    <div class="example_title">Default Example</div>
+    <div class="example_content">
+      <div class="list" id="example">
+        <ul>
+          <li data-number="1000000"></li>
+          <li data-number="3554"></li>
+          <li data-number="9888774"></li>
+          <li data-number="3459234"></li>
+          <li data-number="9784231"></li>
+        </ul>
+        <ul>
+          <li data-number="3453674534"></li>
+          <li data-number="3554"></li>
+          <li data-number="65765"></li>
+          <li data-number="23468988"></li>
+          <li data-number="12334353"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<hr /><hr />
+  <div class="backPages">
+    <div class="example_title">Example (speed=10000)</div>
+    <div class="example_content">
+      <div class="list" id="example_10000">
+        <ul>
+          <li data-number="1000000"></li>
+          <li data-number="3554"></li>
+          <li data-number="9888774"></li>
+          <li data-number="3459234"></li>
+          <li data-number="9784231"></li>
+        </ul>
+        <ul>
+          <li data-number="3453674534"></li>
+          <li data-number="3554"></li>
+          <li data-number="65765"></li>
+          <li data-number="23468988"></li>
+          <li data-number="12334353"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-<ul>
-  <li data-number="1000000"></li>
-  <li data-number="3554"></li>
-  <li data-number="9888774"></li>
-</ul>
+  <div class="backPages">
+    <div class="example_title">Mini (speed=20000)</div>
+    <div class="example_content">
+      <div class="list" id="example_20000">
+        <ul>
+          <li data-number="100"></li>
+          <li data-number="200"></li>
+          <li data-number="300"></li>
+          <li data-number="400"></li>
+          <li data-number="500"></li>
+        </ul>
+        <ul>
+          <li data-number="600"></li>
+          <li data-number="700"></li>
+          <li data-number="800"></li>
+          <li data-number="900"></li>
+          <li data-number="1000"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 </html>
